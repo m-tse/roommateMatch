@@ -6,7 +6,8 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-gem 'less-rails-bootstrap'
+#gem 'less-rails-bootstrap'
+gem 'bootstrap-sass'
 gem 'devise'
 group :development do
   gem 'sqlite3'
