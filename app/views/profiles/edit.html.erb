@@ -1,7 +1,10 @@
-<h1>Name: <%= @user.name %></h1>
+<h1>Email: <%= @user.email %></h1>
+<%= gravatar_for @user %>
+<a href="http://gravatar.com/emails">change</a>
 <%= form_for @user, :url => { :action => "update" }, :html => {:class => "nifty_form"} do |f| %>
 
 
-  <%= f.text_field :name %>
+  <h3>Name: <%= f.text_field :name %></h3>
+<h3>Birthday: <%= date_select :user, :birthday, :start_year => 1950, :end_year=>Time.now.year%></h3>
   <%= f.submit "Finish" %>
 <% end %>
