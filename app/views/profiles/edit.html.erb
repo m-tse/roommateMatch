@@ -1,0 +1,7 @@
+<h1>Name: <%= @user.name %></h1>
+<%= form_for @user, :url => { :action => "update" }, :html => {:class => "nifty_form"} do |f| %>
+
+
+  <%= f.text_field :name %>
+  <%= f.submit "Finish" %>
+<% end %>

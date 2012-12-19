@@ -1,7 +1,9 @@
 RoommateMatch::Application.routes.draw do
   devise_for :users
-#  match 'users/:id' => 'users#show'
-  resources :users, :only => [:show]
+  match 'profiles/:id' => 'profiles#show'
+  match 'edit_profile/:id' => 'profiles#edit'
+  match 'update_profile/:id' => 'profiles#update'
+
   root :to => 'static_pages#home'
   match '/home', to: 'static_pages#home'
   # The priority is based upon order of creation:
