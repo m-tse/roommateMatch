@@ -3,8 +3,8 @@ class FinderController < ApplicationController
   end
 
   def find
-    @results = User.near(current_user.address, 50,
+    @results = User.where("id!=?", current_user.id).near(current_user.address, 50,
   :order => "distance")
-    @results.delete current_user
+
   end
 end

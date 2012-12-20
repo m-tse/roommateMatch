@@ -21,7 +21,8 @@
 
 </div>
 <div class="span4">
-  <% if current_user.id==@user.id %>
+  <% if current_user.id==
+    @user.id %>
   <%= link_to "Edit Profile",{ :controller => "profiles", :action => "edit", :id=> current_user.id}, :class=>"btn" %>
   <% else %>
   <%= link_to "Send him/her a message", {}, :class=>"btn" %>
