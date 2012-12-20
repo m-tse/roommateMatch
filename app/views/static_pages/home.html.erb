@@ -1,1 +1,6 @@
 <h1 class="center">Roommate Search</h1>
+<% if !user_signed_in? %>
+<h3>Sign in and create a profile to view results!</h3>
+<% else %>
+<%= link_to "Find Roommates!", {:controller=>:finder, :action=>:home}, :class=>"btn" %> 
+<% end %>

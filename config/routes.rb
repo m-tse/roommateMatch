@@ -3,7 +3,8 @@ RoommateMatch::Application.routes.draw do
   match 'profiles/:id' => 'profiles#show'
   match 'edit_profile/:id' => 'profiles#edit'
   match 'update_profile/:id' => 'profiles#update'
-
+  match 'find_roommate' => 'finder#find'
+  match 'finder_home' => 'finder#home'
   root :to => 'static_pages#home'
   match '/home', to: 'static_pages#home'
   # The priority is based upon order of creation:

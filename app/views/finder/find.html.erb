@@ -1,0 +1,8 @@
+<h1> results within 50 miles </h1>
+<ul>
+  <% for user in @results %>
+  <div>
+  <%= link_to user.name, {:controller=>:profiles, :id=>user.id, :action=>:show} %>
+  </div>	
+  <% end %>
+</ul>

@@ -5,8 +5,9 @@
 
 
   <h3>Name: <%= f.text_field :name %></h3>
-<h3>Birthday: <%= date_select :user, :birthday, :start_year => 1950, :end_year=>Time.now.year%></h3>
+  <h3>birthday: <%= date_select :user, :birthday, :start_year => 1950, :end_year=>Time.now.year%></h3>
 
-<h3>Ethnicity: <%= collection_select(:user, :ethnicity_id, Ethnicity.all, :id, :name, :prompt =>true) %></h3>
+  <h3>Ethnicity: <%= collection_select(:user, :ethnicity_id, Ethnicity.all, :id, :name, :prompt =>true) %></h3>
+  <h3>Address: <%= f.text_field :address %></h3>
   <%= f.submit "Save Changes" %>
 <% end %>

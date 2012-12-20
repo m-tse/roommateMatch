@@ -12,9 +12,12 @@
     <%= Time.now.year-@user.birthday.year %>
     <% end %>
   </h3>
+  <% if @user.ethnicity!=nil %>
   <h3>Ethnicity:
     <%= @user.ethnicity.name %>
   </h3>
+  <% end %>
+  <h3>Address: <%= @user.address %> </h3>
 
 </div>
 <div class="span4">
